@@ -1,0 +1,70 @@
+﻿@model WebBooks.Models.ListBooks;
+
+
+@{
+    <a class="navbar-brand" href="Books/Insert">Create a New Book</a>
+    <table class="table" style="width:100%;">
+         
+            <tr class="row" style="width:100%;">
+
+                <td style="width:5%;" class="cell">
+                    Id
+            </td>
+                <td style="width:10%;" class="cell">
+                Libro
+            </td>
+                <td style="width:15%;" class="cell">
+                Author
+            </td>
+                <td  style="width:15%;" class="cell">
+                Genre
+            </td>
+                <td style="width:15%;" class="cell">
+                Picture
+            </td>
+
+                <td  ></td>                
+                 
+        </tr>
+        
+        @foreach (var x in Model.Books)
+        {
+            <tboby>
+            <tr class="row" style="width:100%;">
+                    <td style="width:5%;">
+                     @x.Id
+                </td>
+                    <td style="width:10%;">
+                        @x.Name
+                </td>
+                    <td style="width:15%;">
+                        @x.Author
+                </td  >
+                    <td style="width:15%;">
+                        @x.Genre
+                </td>
+                    <td style="width:15%;">
+                        @x.Picture
+                </td>
+
+                
+                    <td style="width:10%;">
+
+                        <a class="navbar-brand" href="Books/Edit?id=@x.Id">Edit</a>
+                    </td>
+
+                    <td style="width:10%;">
+                        <a class="navbar-brand" href="Books/Delete?id=@x.Id">delete</a>
+                    </td>
+                    
+
+           
+        </tr>
+            </tboby>
+        }
+        
+    </table>
+     
+
+
+}

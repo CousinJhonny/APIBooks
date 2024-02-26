@@ -1,0 +1,6 @@
+@apiBOOKS_HostAddress = http://localhost:5220
+
+GET {{apiBOOKS_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
